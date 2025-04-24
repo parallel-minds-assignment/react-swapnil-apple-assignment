@@ -1,87 +1,104 @@
-# OMDB Search App
+# 🎬 OMDB Search App
 
-A blazing-fast **React + TypeScript** enterprise-level application for instant movie search using the OMDB API. Built with Vite, SCSS, Redux Toolkit, Axios, and designed with SOLID principles, clean architecture, and modern web standards in mind.
+A blazing-fast **React + TypeScript** enterprise-level application for instant movie search using the [OMDB API](https://www.omdbapi.com/). Built with **Vite**, **SCSS**, **Redux Toolkit**, and **Axios** — following **SOLID principles**, **clean architecture**, and **modern web standards**.
 
 ---
-##  Setup
+
+## 🚀 Setup
 
 ```bash
-# 1. Clone the repo
+# 1. Clone the repository
 git clone https://github.com/parallel-minds-assignment/react-swapnil-apple-assignment.git
 cd omdb-search-app
 
 # 2. Install dependencies
 npm install
 
-# 3. Start the dev server
+# 3. Create a .env file in the root directory and add:
+VITE_OMDB_API_KEY=your_omdb_api_key
+VITE_BASE_URL=https://www.omdbapi.com/
+
+# 4. Start the development server
 npm run dev
+```
 
 ---
 
-##  Features
+## ✨ Features
 
--  **Instant Search** with debounced input
--  **OMDB Movie API** integration for detailed search results
--  **Redux Toolkit** for efficient global state management and caching
--  **Axios Interceptors** for centralized API request/response handling
--  **Accessible**, **Responsive**, and **Cross-Browser Compatible** UI
--  **Clean Architecture** following **SOLID** principles and layered design
--  **ESLint**, **Prettier**, for consistent code quality
--  **Jest** for unit and integration testing
--  Built with **Dependency Injection (DI)** & **Inversion of Control (IoC)** patterns
--  **Custom Hooks** for separation of logic and reuse
-
-
----
-
-## 📐 Architecture
-
-The app follows a **scalable layered architecture**, cleanly separating concerns:
-
-- `components/` – Presentational & reusable UI elements
-- `features/` – Feature modules following Redux Toolkit slice pattern
-- `hooks/` – Custom hooks (e.g., `useDebouncedSearch`, `useMovieDetails`)
-- `services/` – API logic with Axios and interceptors
-- `store/` – Redux store configuration
-- `types/` – Shared TypeScript interfaces and types
-- `styles/` – SCSS modules and global styles
+- 🔍 **Instant Search** with debounced input
+- 🎞️ **OMDB Movie API** integration with detailed result views
+- ⚛️ **Redux Toolkit** for global state management and caching
+- 🔄 **Axios Interceptors** for centralized API handling
+- ♿ **Accessible**, 📱 **Responsive**, 🌐 **Cross-browser compatible** UI
+- 🧠 **Clean Architecture** with **SOLID** principles
+- 🧹 **ESLint** and **Prettier** for code quality and formatting
+- 🧪 **Jest** for unit and integration testing
+- 🧩 Built using **Dependency Injection (DI)** and **Inversion of Control (IoC)**
+- 🪝 Custom Hooks for logic abstraction and reuse
 
 ---
 
-##  SOLID Principles Implemented
+## 🧱 Architecture
 
-###  Single Responsibility Principle (SRP)
-Each component, service, and utility has a single, well-defined responsibility.
+This app follows a **scalable, layered architecture** to maintain separation of concerns and support enterprise-level complexity:
 
-###  Open/Closed Principle (OCP)
-The architecture is extensible—new features or components can be added without modifying existing code.
-
-###  Liskov Substitution Principle (LSP)
-Interfaces and abstractions are used for component and service contracts, allowing interchangeable implementations.
-
-###  Interface Segregation Principle (ISP)
-Feature-specific interfaces are used to avoid bloated contracts. Type safety and clarity are preserved using TypeScript.
-
-###  Dependency Inversion Principle (DIP)
-Core logic is decoupled from lower-level implementations using:
-- Axios interceptors as abstraction for HTTP logic
-- Custom hooks for encapsulating reusable logic
-- Injected configuration (e.g., base URLs, API keys)
-
-###  Axios Interceptors
-- implemented Axios interceptors to manage all API requests and responses from a single place. This ensures separation of concerns and centralized error handling.
+```
+src/
+├── components/      # Reusable and presentational UI components
+├── features/        # Feature modules (Redux slices + components)
+├── hooks/           # Custom hooks (e.g., useDebouncedSearch, useMovieDetails)
+├── services/        # Axios logic, interceptors, and API calls
+├── store/           # Redux store setup and middleware
+├── types/           # Shared TypeScript types and interfaces
+├── styles/          # SCSS files for global and modular styling
+```
 
 ---
 
-##  Tech Stack
+## 🧠 SOLID Principles in Practice
 
-- [React 19](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/)
-- [Redux Toolkit](https://redux-toolkit.js.org/)
-- [Axios](https://axios-http.com/)
-- [SCSS](https://sass-lang.com/)
-- [React Toastify](https://fkhadra.github.io/react-toastify/)
-- [ESLint + Prettier](https://eslint.org/)
-- [Jest](https://jestjs.io/)
+### 🔹 Single Responsibility Principle (SRP)
+Each component and utility does one thing and does it well.
 
+### 🔹 Open/Closed Principle (OCP)
+The system is open for extension but closed for modification — new features can be added without altering existing code.
+
+### 🔹 Liskov Substitution Principle (LSP)
+Abstractions and interfaces allow flexible implementations without breaking functionality.
+
+### 🔹 Interface Segregation Principle (ISP)
+Small, specific TypeScript interfaces ensure clarity and prevent over-bloated contracts.
+
+### 🔹 Dependency Inversion Principle (DIP)
+Business logic is decoupled from lower-level modules using:
+- Axios interceptors for API abstraction
+- Custom hooks for reusable logic encapsulation
+- Environment-based injected configs
+
+---
+
+## 🔁 Axios Interceptors
+
+Implemented Axios interceptors to:
+- Centralize request and response handling
+- Provide consistent error management
+- Keep API logic clean and reusable
+
+---
+
+## 🛠️ Tech Stack
+
+| Tech | Description |
+|------|-------------|
+| [React 19](https://react.dev/) | Modern declarative UI framework |
+| [TypeScript](https://www.typescriptlang.org/) | Type-safe JavaScript |
+| [Vite](https://vitejs.dev/) | Lightning-fast frontend build tool |
+| [Redux Toolkit](https://redux-toolkit.js.org/) | Simplified Redux state management |
+| [Axios](https://axios-http.com/) | Promise-based HTTP client |
+| [SCSS](https://sass-lang.com/) | CSS with superpowers |
+| [React Toastify](https://fkhadra.github.io/react-toastify/) | Elegant toast notifications |
+| [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) | Code linting and formatting |
+| [Jest](https://jestjs.io/) | Robust testing framework |
+
+---
