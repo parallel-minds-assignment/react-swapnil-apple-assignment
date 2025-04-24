@@ -1,0 +1,250 @@
+/* Base styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* Layout */
+.search-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+/* Input */
+.search-input {
+  width: 50%;
+  max-width: 800px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* No results */
+.no-results {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* Results Grid */
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Movie Card */
+.movie-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+  outline: none;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-card div {
+  padding: 0.5rem;
+}
+
+.movie-card div h3 {
+  margin: 0.25rem 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.movie-card div h3:hover {
+  color: #007bff;
+}
+
+.movie-card div p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Movie Details Popup */
+.movie-details-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 850px;
+  width: 95%;
+  background: linear-gradient(to right, #ffffff 55%, rgba(255, 255, 255, 0.85));
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+  overflow: hidden;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.movie-details-popup .movie-details-image {
+  width: 220px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-right: 1px solid #ddd;
+}
+
+.movie-details-popup .details-content {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.movie-details-popup h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.movie-details-meta {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.movie-details-runtime-genre {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.runtime {
+  background-color: #f44336;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.genre {
+  color: #555;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.movie-details-plot {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Loader */
+.loader,
+.results-loader,
+.movie-details-loader {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .search-page {
+    padding: 1rem;
+  }
+
+  .movie-card div h3 {
+    font-size: 1rem;
+  }
+
+  .movie-card div p {
+    font-size: 0.75rem;
+  }
+
+  .movie-details-popup {
+    flex-direction: column;
+    max-width: 95%;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+  }
+
+  .movie-details-popup .movie-details-image {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .movie-details-popup .details-content {
+    padding: 1rem;
+  }
+}
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  button {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  span {
+    font-weight: bold;
+  }
+}
