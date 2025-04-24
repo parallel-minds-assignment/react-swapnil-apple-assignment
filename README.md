@@ -9,7 +9,7 @@ A blazing-fast **React + TypeScript** enterprise-level application for instant m
 ```bash
 # 1. Clone the repository
 git clone https://github.com/parallel-minds-assignment/react-swapnil-apple-assignment.git
-cd omdb-search-app
+cd react-swapnil-apple-assignment
 
 # 2. Install dependencies
 npm install
