@@ -1,10 +1,10 @@
-# 🎬 OMDB Search App
+# OMDB Search App
 
 A blazing-fast **React + TypeScript** enterprise-level application for instant movie search using the [OMDB API](https://www.omdbapi.com/). Built with **Vite**, **SCSS**, **Redux Toolkit**, and **Axios** — following **SOLID principles**, **clean architecture**, and **modern web standards**.
 
 ---
 
-## 🚀 Setup
+## Setup
 
 ```bash
 # 1. Clone the repository
@@ -24,22 +24,22 @@ npm run dev
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🔍 **Instant Search** with debounced input
-- 🎞️ **OMDB Movie API** integration with detailed result views
-- ⚛️ **Redux Toolkit** for global state management and caching
-- 🔄 **Axios Interceptors** for centralized API handling
-- ♿ **Accessible**, 📱 **Responsive**, 🌐 **Cross-browser compatible** UI
-- 🧠 **Clean Architecture** with **SOLID** principles
-- 🧹 **ESLint** and **Prettier** for code quality and formatting
-- 🧪 **Jest** for unit and integration testing
-- 🧩 Built using **Dependency Injection (DI)** and **Inversion of Control (IoC)**
-- 🪝 Custom Hooks for logic abstraction and reuse
+-  **Instant Search** with debounced input
+-  **OMDB Movie API** integration with detailed result views
+-  **Redux Toolkit** for global state management and caching
+-  **Axios Interceptors** for centralized API handling
+-  **Accessible**, 📱 **Responsive**, 🌐 **Cross-browser compatible** UI
+-  **Clean Architecture** with **SOLID** principles
+-  **ESLint** and **Prettier** for code quality and formatting
+-  **Jest** for unit and integration testing
+-  Built using **Dependency Injection (DI)** and **Inversion of Control (IoC)**
+-  Custom Hooks for logic abstraction and reuse
 
 ---
 
-## 🧱 Architecture
+## Architecture
 
 This app follows a **scalable, layered architecture** to maintain separation of concerns and support enterprise-level complexity:
 
@@ -56,21 +56,18 @@ src/
 
 ---
 
-## 🧠 SOLID Principles in Practice
+## SOLID Principles in Practice
 
-### 🔹 Single Responsibility Principle (SRP)
+###  Single Responsibility Principle (SRP)
 Each component and utility does one thing and does it well.
 
-### 🔹 Open/Closed Principle (OCP)
+### Open/Closed Principle (OCP)
 The system is open for extension but closed for modification — new features can be added without altering existing code.
 
-### 🔹 Liskov Substitution Principle (LSP)
-Abstractions and interfaces allow flexible implementations without breaking functionality.
-
-### 🔹 Interface Segregation Principle (ISP)
+### Interface Segregation Principle (ISP)
 Small, specific TypeScript interfaces ensure clarity and prevent over-bloated contracts.
 
-### 🔹 Dependency Inversion Principle (DIP)
+### Dependency Inversion Principle (DIP)
 Business logic is decoupled from lower-level modules using:
 - Axios interceptors for API abstraction
 - Custom hooks for reusable logic encapsulation
@@ -78,7 +75,7 @@ Business logic is decoupled from lower-level modules using:
 
 ---
 
-## 🔁 Axios Interceptors
+## Axios Interceptors
 
 Implemented Axios interceptors to:
 - Centralize request and response handling
@@ -87,7 +84,7 @@ Implemented Axios interceptors to:
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Tech | Description |
 |------|-------------|
